@@ -82,7 +82,7 @@ X = [ones(m, 1) X];
 fprintf('Running gradient descent ...\n');
 
 % Choose some alpha value
-alpha = 0.1;
+alpha = 0.03;
 num_iters = 400;
 
 % Init Theta and Run Gradient Descent 
@@ -107,7 +107,7 @@ fprintf('\n');
 price = 0; % You should change this
 house = [1650, 3];
 house = (house - mu) ./ sigma;
-house = [ones(1,1), house]
+house = [1, house];
 
 price = house * theta;
 
@@ -155,6 +155,7 @@ fprintf('\n');
 % ====================== YOUR CODE HERE ======================
 price = 0; % You should change this
 
+price = [1, 1650, 3] * theta;
 
 % ============================================================
 
